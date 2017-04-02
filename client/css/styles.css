@@ -1,0 +1,39 @@
+body {
+  padding: 20px;
+}
+
+table {
+   border-collapse: collapse;
+   width: 100%;
+}
+
+td, th {
+   border: 1px solid black;
+   text-align: left;
+   padding: 8px;
+}
+
+th {
+  background-color: lightgrey;
+}
+
+tr:nth-child(even) {
+}
+#header{
+  padding: 5px;
+  text-align: right;
+}
+.logout {
+  text-align: right;
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.likebutton {
+  background: green;
+  color: yellow;
+}
+
+.errors {
+  color: red;
+}

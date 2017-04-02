@@ -1,0 +1,37 @@
+<head><title>Create Poll</title></head>
+<div id="header"><a href="#!/questionboard">Cancel</a></div>
+
+<h3>Put the question and options here:</h3>
+<div ng-messages="questionForm.question.$error" class="errors">
+  <p ng-message="required">Must enter your question.</p>
+  <p ng-message="minlength">Question must be at least 10 characters.</p>
+</div>
+<div ng-messages="questionForm.description.$error" class="errors">
+  <p ng-message="required">Must enter all your Options.</p>
+  <p ng-message="minlength">Options must be at least 3 characters.</p>
+</div>
+<div ng-messages="questionForm.description2.$error" class="errors">
+  <p ng-message="required">Must enter all your Options.</p>
+  <p ng-message="minlength">Options must be at least 3 characters.</p>
+</div>
+<div ng-messages="questionForm.description3.$error" class="errors">
+  <p ng-message="required">Must enter all your Options.</p>
+  <p ng-message="minlength">Options must be at least 3 characters.</p>
+</div>
+<div ng-messages="questionForm.description4.$error" class="errors">
+  <p ng-message="required">Must enter all your Options.</p>
+  <p ng-message="minlength">Optionsmust be at least 3 characters.</p>
+</div>
+
+
+
+
+
+<form name="questionForm">
+  <p>Question: <textarea name="question" rows="1" cols="80" placeholder="Question" ng-model="newQuestion.text" required minlength="8"></textarea></p>
+  <p>Option 1: <textarea name="description" rows="1" cols="40" placeholder="Option 1" ng-model="newQuestion.description" required minlength="3"></textarea></p>
+  <p>Option 2: <textarea name="description" rows="1" cols="40" placeholder="Option 2" ng-model="newQuestion.description2" required minlength="3"></textarea></p>
+  <p>Option 3: <textarea name="description" rows="1" cols="40" placeholder="Option 3" ng-model="newQuestion.description3" required minlength="3"></textarea></p>
+  <p>Option 4: <textarea name="description" rows="1" cols="40" placeholder="Option 4" ng-model="newQuestion.description4" required minlength="3"></textarea></p>
+  <p><a href="#!/questionboard"><button type="button" name="button">Cancel</button></a><input type="submit" value="Submit" ng-disabled="questionForm.$invalid" ng-click="addQuestion(newQuestion)"></p>
+</form>

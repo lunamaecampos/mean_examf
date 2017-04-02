@@ -1,0 +1,32 @@
+<head><title>Survey Poll</title></head>
+<div id="header"><a href="#!/questionboard">Go To Polls</a></div>
+<h1>{{question.text}}</h1>
+<h4>Click the Vote button to choose one</h4>
+
+<table>
+  <tr>
+    <th>Option</th>
+    <th>Current Count of Votes</th>
+    <th>Action</th>
+  </tr>
+  <tr>
+    <td>{{question.description}}</td>
+    <td>{{question.likes}} Votes</td>
+    <td><button class="likebutton" type="button" ng-click="addLike(question._id)">Vote</button></td>
+  </tr>
+  <tr>
+    <td>{{question.description2}}</td>
+    <td>{{question.likes2}} Votes</td>
+    <td><button class="likebutton" type="button" ng-click="addLike2(question._id)">Vote</button></td>
+  </tr>
+  <tr>
+    <td>{{question.description3}}</td>
+    <td>{{question.likes3}} Votes</td>
+    <td><button class="likebutton" type="button" ng-click="addLike3(question._id)">Vote</button></td>
+  </tr>
+  <tr>
+    <td>{{question.description4}}</td>
+    <td>{{question.likes4}} Votes</td>
+    <td><button class="likebutton" type="button" ng-click="addLike4(question._id)">Vote</button></td>
+  </tr>
+</table>
